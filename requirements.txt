@@ -4,11 +4,10 @@
 #
 #    pip-compile --no-index --output-file=requirements.txt requirements.in
 #
-chromedriver-binary==88.0.4324.27.1  # via -r requirements.in
-click==7.1.2              # via pip-tools
-pip-tools==5.5.0          # via -r requirements.in
-selenium==3.141.0         # via -r requirements.in
-urllib3==1.26.2           # via selenium
+click==7.1.2
+    # via pip-tools
+pip-tools==5.5.0
+    # via -r requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

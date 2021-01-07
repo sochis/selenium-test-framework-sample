@@ -16,14 +16,9 @@ $ sudo apt install python3-selenium
 ```
 
 ## Tools by commandline
-1. install requirements :
+1. Execute command
 ``` 
-$ pip install -r requirements.txt
-```
-
-2. Execute command
-``` 
-$ python commandline_tool.py
+$ python commandline_tool.py -s ${any_text}
 ```
 
 ## Execute test
