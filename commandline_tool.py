@@ -25,7 +25,7 @@ def search_google(search_text: str, headless: bool) -> None:
         home.open()
 
         home.search_box_input.send_keys(search_text)
-        home.google_search_submit.click()
+        home.google_search_submit.submit()
 
     finally:
         teardown_driver(driver)

@@ -40,5 +40,5 @@ class TestPartnersSit:
         assert self.home.search_box_input.get_attribute("value") == "Search google"
         assert self.home.search_box_input.wait_for_text(expected_text="Search google", value_flag=True)
         self.home.search_box_input.is_displayed()
-        self.home.google_search_submit.click()
+        self.home.google_search_submit.submit()
         logger.info("Completed test for Element.")

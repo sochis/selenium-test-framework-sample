@@ -37,6 +37,7 @@ class Element:
         parent(Optional[WebElement]): Parent WebElement (default=None).
         xpath(bool): xpath flag.
     """
+
     def __init__(self,
                  driver: Remote,
                  id_: str,
@@ -318,6 +319,24 @@ class Element:
         if clear:
             elem.clear()
         elem.send_keys(keys)
+
+    def submit(self,
+               *args: str,
+               max_wait: int = 10,
+               **kwargs: str) -> None:
+        """ SendKeys to Web Element.
+        Arguments:
+            max_wait(int): maximum wait time for display elements (default=10sec).
+            *args:(str): arguments for _id.
+            **kwargs(str): keyword arguments for _id.
+        Raises:
+            TimeoutException: element is not found.
+        """
+        elem = self.get(*args,
+                        method=Method.PRESENCE,
+                        max_wait=max_wait,
+                        **kwargs)
+        elem.submit()
 
     def wait_for_text(self,
                       expected_text: str,

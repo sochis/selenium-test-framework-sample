@@ -19,7 +19,7 @@ def set_chrome_driver_options(headless: bool = True) -> Chrome:
         driver(Chrome): Chrome webdriver
     """
     options = Options()
-    options.binary_location = '/bin/google-chrome'
+    options.sebinary_location = '/bin/google-chrome'
     if headless:
         options.add_argument('--headless')
     options.add_argument('--disable-gpu')
@@ -30,7 +30,7 @@ def set_chrome_driver_options(headless: bool = True) -> Chrome:
     options.add_argument("--enable-logging")
     options.add_argument("--log-level=2")
     options.add_argument("--ignore-certificate-errors")
-    driver = Chrome(options=options)
+    driver = Chrome(options=options, executable_path='/bin/chromedriver')
     driver.maximize_window()
 
     return driver

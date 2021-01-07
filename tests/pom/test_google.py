@@ -34,5 +34,5 @@ class TestGoogle:
         logger.info("Start test for searching anything on Google search page.")
         self.home.open()
         self.home.search_box_input.send_keys("search google")
-        self.home.google_search_submit.click()
+        self.home.google_search_submit.submit()
         logger.info("Completed test for searching anything on Google search page..")
