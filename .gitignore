@@ -70,20 +70,6 @@ target/
 # pytest files
 .pytest_cache
 
-# skynet_e related files
-*.tga
-tests/*.txt
-skynete_results/
-skynet.user.conf
-screenshot_*.png
-*_process_id.txt
-
-# Pycharm
-.idea
-
 # mypy
 .mypy_cache
 
-# Telemetry
-json_data/
-aa_data/
